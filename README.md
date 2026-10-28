@@ -48,6 +48,40 @@ CheapHDR includes dual-mode automatic detection out of the box:
 6. **If you ever want to deactivate or turn it off:**
    * **To stop it right now:** Click **`Stop-CheapHDR.bat`**.
    * **To remove from Windows startup:** Click **`Remove-From-Startup.bat`**.
+  
+   * 
+## ⚙️ 2-Minute HyperHDR Setup (One-Time)
+
+Download and open [HyperHDR](https://github.com/awawa-dev/HyperHDR/releases) (in your browser at **`http://localhost:8090`**):
+
+1. **Set Controller:**
+   * Go to **LED Hardware** $\rightarrow$ **LED Controller**.
+   * **Controller type:** Select **`udpraw`**.
+   * **Target IP:** `127.0.0.1`
+   * **Port:** `2801`
+   * **LED count:** Enter your strip's total LED count (default is `63` for standard 27" monitor strips).
+   * *Click **Save settings**.*
+
+2. **Set Monitor LED Layout:**
+   * Go to **LED Hardware** $\rightarrow$ **LED Layout**.
+   * Enter the number of LEDs on each side of your monitor (e.g., Top: `29`, Left: `17`, Right: `17`, Bottom: `0`).
+   * Choose your starting corner and direction (Clockwise / Counter-Clockwise).
+   * *Click **Save settings**.*
+
+3. **Turn On Movie Anti-Strobe (The Fix!):**
+   * Go to **Image Processing**:
+     * **Black Border Detection:** Check **Enable** *(Threshold: `5%`)*.  
+       *(This automatically ignores widescreen movie black bars so your lights never flicker).*
+     * **Smoothing:** Check **Enable** *(Settling time: `160ms` – `220ms`)*.  
+       *(Turns harsh flickers into smooth, luxurious ambient blooms).*
+     * **Update frequency:** Set to **`30Hz`** *(optimal 30 FPS, near-zero CPU usage)*.
+   * *Click **Save settings**.*
+
+4. **Turn On Output:**
+   * On the **Overview** dashboard, turn **System Screen Capture** $\rightarrow$ **ON** 🟢, **LED Device** $\rightarrow$ **ON** 🟢, and turn **USB Capture** $\rightarrow$ **OFF** 🔴.
+   * Click the top-right master power button to **ON** 🟢.
+
+**Your lights will now mirror your screen smoothly!**
 
 ---
 
